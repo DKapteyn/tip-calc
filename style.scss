@@ -1,0 +1,61 @@
+    /*Primary Colours*/
+    $strong-cyan:hsl(172, 67%, 45%);
+    /*Neutral Colours*/
+    $very-dark-cyan: hsl(183, 100%, 15%);
+    $dark-grayish-cyan1: hsl(186, 14%, 43%);
+    $dark-grayish-cyan2: hsl(184, 14%, 56%);
+    $light-grayish-cyan1: hsl(185, 41%, 84%);
+    $light-grayish-cyan2: hsl(189, 41%, 97%);
+    $white: hsl(0, 0%, 100%);
+
+html,body{
+    height: 100%;
+}
+
+body{
+   display:grid;
+    background-color: $light-grayish-cyan1;
+   justify-content: center;
+    @media screen and (min-width: 376px){
+        align-content: center;
+    }
+
+}
+
+.allContainers{
+    display:grid;
+    justify-content: center;  
+    border-radius: 20px;
+}
+
+
+.mainContainer{
+   background-color: $white;
+   
+   
+   @media screen and (min-width:376px){
+    border:2px solid black;
+    grid-template-areas: 
+    "leftContainer rightContainer" ;
+   
+    align-content: center;
+   
+   padding:30px; 
+    gap: 30px;
+   }
+    
+}
+.rightContainer{
+    grid-area: rightContainer;
+     height:415px;
+    width:415px;
+    border:2px solid black;
+    background-color: $very-dark-cyan;
+
+}
+.leftContainer{
+    grid-area:leftContainer;
+    height:415px;
+    width:415px;
+    border:2px solid black;
+}
