@@ -1,7 +1,11 @@
 /*Primary Colours*/
 /*Neutral Colours*/
-html, body {
+html,
+body {
   height: 100%;
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -9,44 +13,173 @@ body {
   background-color: #c5e4e7;
   justify-content: center;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 576px) {
   body {
     align-content: center;
   }
 }
 
-.allContainers {
-  display: grid;
-  justify-content: center;
-  border-radius: 20px;
+header {
+  font-size: 24px;
+  font-weight: 700;
+  color: #5e7a7d;
+  padding-top: 25px;
+  text-align: center;
 }
-
+@media screen and (min-width: 576px) {
+  header {
+    padding-bottom: 70px;
+  }
+}
 .mainContainer {
   background-color: white;
+  display: grid;
+  border-radius: 20px;
+  padding: 30px;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 576px) {
   .mainContainer {
-    border: 2px solid black;
     grid-template-areas: "leftContainer rightContainer";
     align-content: center;
-    padding: 30px;
-    gap: 30px;
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .mainContainer {
+    grid-template-areas: "leftContainer" "rightContainer";
   }
 }
 
-.rightContainer {
-  grid-area: rightContainer;
-  height: 415px;
-  width: 415px;
-  border: 2px solid black;
-  background-color: #00494d;
+.rlContainers {
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+@media screen and (min-width: 576px) {
+  .rlContainers {
+    height: 415px;
+    width: 415px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .rlContainers {
+    max-width: 375px;
+  }
 }
 
+/*LEFT CONTAINER AND CONTENTS*/
 .leftContainer {
   grid-area: leftContainer;
-  height: 415px;
-  width: 415px;
-  border: 2px solid black;
+}
+.alltips {
+  display: grid;
+  gap: 14px;
+}
+@media screen and (min-width: 576px) {
+  .alltips {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 575px) {
+  .alltips {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+.tipoptions {
+  background-color: #00494d;
+  border-radius: 7px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10px;
+  height: 50px;
+  font-size: 24px;
+}
+
+#custom {
+  background-color: white;
+  color: #5e7a7d;
+}
+
+.display-left {
+  background-color: #f4fafa;
+  height: 50px;
+}
+
+.title-left {
+  padding-bottom: 20px;
+  padding-top: 45px;
+  font-weight: 700;
+  color: #5e7a7d;
+}
+
+/*RIGHT CONTAINER AND CONTENTS*/
+.rightContainer {
+  grid-area: rightContainer;
+  background-color: #00494d;
+}
+@media screen and (min-width: 576px) {
+  .rightContainer {
+    padding: 40px;
+    gap: 35px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .rightContainer {
+    padding: 25px;
+  }
+}
+
+.total-per-person {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tip-per-person {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 576px) {
+  .tip-per-person {
+    padding-bottom: 50px;
+  }
+}
+
+.reset {
+  height: 50px;
+  background-color: #26c0ab;
+  border-radius: 5px;
+  color: #00494d;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 10px;
+}
+@media screen and (min-width: 576px) {
+  .reset {
+    margin-top: 60px;
+  }
+}
+
+.title-right {
+  color: white;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #7f9c9f;
+  font-weight: 700;
+}
+
+.display-right {
+  display: relative;
+  color: #26c0ab;
+  font-size: 45px;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
