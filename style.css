@@ -98,16 +98,44 @@ header {
   padding-top: 10px;
   height: 50px;
   font-size: 24px;
+  cursor: pointer;
+}
+
+.tipoptions:hover {
+  background-color: #26c0ab;
+  color: #00494d;
 }
 
 #custom {
   background-color: white;
   color: #5e7a7d;
+  cursor: pointer;
 }
 
 .display-left {
+  display: flex;
   background-color: #f4fafa;
-  height: 50px;
+  max-height: 45px;
+  border-radius: 5px;
+  padding: 10px 12px 10px 12px;
+}
+.display-left input {
+  border-style: none;
+  text-align: end;
+  background-color: transparent;
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+  color: #7f9c9f;
+  font-weight: 700;
+  cursor: pointer;
+}
+.display-left input:focus {
+  outline: none;
+}
+.display-left img {
+  height: 18px;
+  align-self: center;
 }
 
 .title-left {
@@ -139,6 +167,10 @@ header {
   justify-content: space-between;
 }
 
+.total-per-person-print {
+  align-self: center;
+}
+
 .tip-per-person {
   display: flex;
   justify-content: space-between;
@@ -149,20 +181,32 @@ header {
   }
 }
 
+.tip-per-person-print {
+  align-self: center;
+}
+
 .reset {
   height: 50px;
-  background-color: #26c0ab;
-  border-radius: 5px;
+  background-color: #0d686d;
+  border-radius: 7px;
   color: #00494d;
   font-weight: 700;
   font-size: 24px;
   text-align: center;
   padding-top: 10px;
+  filter: blur(1px);
 }
 @media screen and (min-width: 576px) {
   .reset {
     margin-top: 60px;
+    cursor: pointer;
   }
+}
+
+.reset:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+  filter: blur(0px);
 }
 
 .title-right {

@@ -1,89 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
- 
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Frontend Mentor | Tip calculator app</title>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <header>
-    <div>S P L I</div>
-    <div>T T E R</div>
-  </header>
-<div class="mainContainer">
-<div class="leftContainer rlContainers">  
-  
-   <div class="bill">
-    <div class="title-left"> Bill</div>
-    <div class="display-left">
-      <img src="images/icon-dollar.svg" alt="dollar sign">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>S P L I</div>
+      <div>T T E R</div>
+    </header>
+    <div class="mainContainer">
+      <div class="leftContainer rlContainers">
+        <div class="bill">
+          <div class="title-left">Bill</div>
+          <div class="display-left">
+            <img src="images/icon-dollar.svg" alt="dollar sign" />
+            <input type="text" inputmode="decimal" id="bill-input" placeholder="0">
+          </div>
+        </div>
+
+        <div class="tip-percent">
+          <div class="title-left">Select Tip %</div>
+          <div class="alltips">
+            <div class="tipoptions" id="five">5%</div>
+            <div class="tipoptions" id="ten">10%</div>
+            <div class="tipoptions" id="fifteen">15%</div>
+            <div class="tipoptions" id="twentyfive">25%</div>
+            <div class="tipoptions" id="fifty">50%</div>
+            <div class="tipoptions" id="custom">Custom</div>
+          </div>
+        </div>
+        <div class="num-ppl">
+          <div class="title-left">Number of People</div>
+          <div  class="display-left">
+            <img src="images/icon-person.svg" alt="image of person"/>
+            <input type="text" inputmode="decimal" id="num-ppl-input" placeholder="0">
+            
+          </div>
+
+        </div>
+      </div>
+
+      <div class="rightContainer rlContainers">
+        <div class="tip-per-person">
+          <div class="tip-per-person-print">
+            <div class="title-right">Tip Amount</div>
+            <div class="subtitle">/ person</div>
+          </div>
+          <div class="display-right" id="tip-per-person-display">$0.00</div>
+        </div>
+        <div class="total-per-person">
+          <div class="total-per-person-print">
+            <div class="title-right">Total</div>
+            <div class="subtitle">/ person</div>
+          </div>
+          <div class="display-right" id="total-per-person-display">$0.00</div>
+        </div>
+
+        <div class="reset">
+          <div>RESET</div>
+        </div>
+      </div>
     </div>
-    
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
     </div>
-
-   <div class="tip-percent">
-  <div class="title-left">Select Tip %</div>
-  <div class="alltips">
-  <div class="tipoptions" id="five">5%</div>
-  <div class="tipoptions" id="ten">10%</div>
-  <div class="tipoptions" id="fifteen"> 15%</div>
-  <div class="tipoptions" id="twentyfive"> 25%</div>
-  <div class="tipoptions" id="fifty"> 50%</div>
-  <div class="tipoptions" id="custom">Custom</div>
-</div>
-</div>
-<div class="num-ppl">
-  <div class="title-left">Number of People</div>
-  <div class="display-left"><img src="images/icon-person.svg" alt="image of person" > </div>
-  </div>
-</div>
-
-
-<div class="rightContainer rlContainers">
-  <div class="tip-per-person">
-<div class="tip-per-person-print">
-  <div class="title-right">Tip Amount</div>
- <div class="subtitle"> / person</div>
-</div>
- <div class="display-right" id="tip-per-person-display">$0.00</div>
-</div>
-<div class="total-per-person">
-  <div class="total-per-person-print">
-  <div class="title-right">Total</div>
-  <div class="subtitle">/ person</div>
-</div>
-  <div class="display-right" id="total-per-person-display">
-    $0.00
-  </div>
-</div>
-
-<div class="reset">
-  <div >RESET</div>
-</div>
-  
-
-</div>
-</div>
-
-
- 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 </html>

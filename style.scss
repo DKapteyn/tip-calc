@@ -7,6 +7,7 @@ $dark-grayish-cyan2: hsl(184, 14%, 56%);
 $light-grayish-cyan2: hsl(185, 41%, 84%);
 $light-grayish-cyan1: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
+$boob: #0d686d;
 
 html,
 body {
@@ -119,24 +120,67 @@ header{
  
     height: 50px;
     font-size: 24px;
+    cursor: pointer;
     
+}
+
+.tipoptions:hover{
+  background-color: $strong-cyan;
+  color:$very-dark-cyan;
 }
 
 #custom {
   background-color: $white;
   color: $dark-grayish-cyan1;
+  cursor: pointer;
 }
 
 .display-left {
+  display:flex;
+  
   background-color: $light-grayish-cyan1;
-  height: 50px;
+  max-height: 45px;
+  border-radius: 5px;
+  padding:10px 12px 10px 12px;
+  
+
+  input{
+   border-style:none;
+   text-align: end;
+    background-color: transparent;
+  width:100%;
+    font-family: "Space Mono", monospace;
+    font-size: 20px;
+    color:$dark-grayish-cyan2;
+    font-weight: 700;
+    cursor: pointer;
+   
+    
+
+    
+  }
+  input:focus{
+    outline:none;
+  }
+
+  img{
+    height: 18px;
+    align-self: center;
+  }
+
+ 
+  
 }
+
+
+
 
 .title-left {
   padding-bottom: 20px;
   padding-top:45px;
   font-weight: 700;
   color: $dark-grayish-cyan1;
+  
   
 }
 
@@ -164,6 +208,11 @@ header{
   display: flex;
   justify-content: space-between;
 }
+.total-per-person-print{
+  align-self:center;
+
+}
+
 
 .tip-per-person {
  
@@ -174,35 +223,52 @@ header{
     padding-bottom: 50px;
   
 }
-
-
 }
+.tip-per-person-print  {
+  align-self: center;
+}
+
+
 
 .reset {
   
   height: 50px;
-  background-color: $strong-cyan;
-  border-radius: 5px;
+  background-color:#0d686d ;
+  border-radius: 7px;
   color: $very-dark-cyan;
   font-weight: 700;
   font-size: 24px;
   text-align: center;
   padding-top: 10px;
+  filter: blur(1px);
   @media screen and (min-width:576px) {
     margin-top: 60px;
+   
+   cursor: pointer;
+    
   
+}}
+.reset:hover{
+  background-color: $strong-cyan;
+  color:$very-dark-cyan;
+filter:blur(0px);
+
 }
-}
+
+
+
 
 .title-right {
   color: $white;
   font-weight: 700;
+  
 
 }
 
 .subtitle {
   color: $dark-grayish-cyan2;
   font-weight: 700;
+
 }
 
 .display-right{
@@ -210,6 +276,7 @@ header{
     color:$strong-cyan;
     font-size:45px;
     font-weight:700;
+   
     
 
 }
