@@ -58,7 +58,7 @@ header {
 }
 @media screen and (min-width: 576px) {
   .rlContainers {
-    height: 415px;
+    max-height: 415px;
     width: 415px;
   }
 }
@@ -75,6 +75,7 @@ header {
 .alltips {
   display: grid;
   gap: 14px;
+  height: 110px;
 }
 @media screen and (min-width: 576px) {
   .alltips {
@@ -90,26 +91,41 @@ header {
 }
 
 .tipoptions {
+  display: flex;
   background-color: #00494d;
-  border-radius: 7px;
+  border-radius: 3px;
   color: white;
   font-weight: 700;
-  text-align: center;
-  padding-top: 10px;
-  height: 50px;
-  font-size: 24px;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
   cursor: pointer;
 }
 
 .tipoptions:hover {
-  background-color: #26c0ab;
+  background-color: #9de9df;
   color: #00494d;
 }
 
 #custom {
-  background-color: white;
-  color: #5e7a7d;
+  display: flex;
+  background-color: #f4fafa;
+  color: #00494d;
   cursor: pointer;
+  width: 97px;
+  padding: 0 10px 0 10px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Mono", monospace;
+  border: 3px solid transparent;
+}
+
+#custom:focus {
+  outline: none;
+  border: 3px solid #26c0ab;
+  text-align: end;
+  padding-right: 10px;
 }
 
 .display-left {
@@ -117,7 +133,8 @@ header {
   background-color: #f4fafa;
   max-height: 45px;
   border-radius: 5px;
-  padding: 10px 12px 10px 12px;
+  padding: 10px 10px 10px 10px;
+  border: 3px solid transparent;
 }
 .display-left input {
   border-style: none;
@@ -125,8 +142,8 @@ header {
   background-color: transparent;
   width: 100%;
   font-family: "Space Mono", monospace;
-  font-size: 20px;
-  color: #7f9c9f;
+  font-size: 24px;
+  color: #00494d;
   font-weight: 700;
   cursor: pointer;
 }
@@ -138,8 +155,13 @@ header {
   align-self: center;
 }
 
+.display-left:hover,
+.display-left:focus-within {
+  border: 3px solid #26c0ab;
+}
+
 .title-left {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-top: 45px;
   font-weight: 700;
   color: #5e7a7d;
@@ -185,7 +207,7 @@ header {
   align-self: center;
 }
 
-.reset {
+#reset {
   height: 50px;
   background-color: #0d686d;
   border-radius: 7px;
@@ -197,14 +219,14 @@ header {
   filter: blur(1px);
 }
 @media screen and (min-width: 576px) {
-  .reset {
+  #reset {
     margin-top: 60px;
     cursor: pointer;
   }
 }
 
-.reset:hover {
-  background-color: #26c0ab;
+#reset:hover {
+  background-color: #9de9df;
   color: #00494d;
   filter: blur(0px);
 }

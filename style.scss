@@ -7,14 +7,15 @@ $dark-grayish-cyan2: hsl(184, 14%, 56%);
 $light-grayish-cyan2: hsl(185, 41%, 84%);
 $light-grayish-cyan1: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
-$boob: #0d686d;
+$resetdefault: #0d686d;
+$hover-blue: #9de9df;
 
 html,
 body {
   height: 100%;
   font-family: "Space Mono", monospace;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -26,24 +27,20 @@ body {
   }
 }
 
-header{
-    font-size: 24px;
-    font-weight: 700;
-    color:$dark-grayish-cyan1;
-    padding-top:25px;
-    
-    text-align: center;
+header {
+  font-size: 24px;
+  font-weight: 700;
+  color: $dark-grayish-cyan1;
+  padding-top: 25px;
 
-    @media screen and (min-width: 576px) {
-        padding-bottom:70px;
-        
-      }
-    
-      @media screen and (max-width:575px) {
-        
-        
-          
-      }
+  text-align: center;
+
+  @media screen and (min-width: 576px) {
+    padding-bottom: 70px;
+  }
+
+  @media screen and (max-width: 575px) {
+  }
 }
 
 .mainContainer {
@@ -51,233 +48,209 @@ header{
   display: grid;
   border-radius: 20px;
   padding: 30px;
- 
 
   @media screen and (min-width: 576px) {
     grid-template-areas: "leftContainer rightContainer";
     align-content: center;
-   
+
     gap: 50px;
   }
 
-  @media screen and (max-width:575px) {
-      grid-template-areas: "leftContainer" "rightContainer";
-     
-    
-      
+  @media screen and (max-width: 575px) {
+    grid-template-areas: "leftContainer" "rightContainer";
   }
-
 }
-  .rlContainers {
-    
-    
-    border-radius: 20px;
-   display: flex;
-   justify-content: space-evenly;
-   flex-direction: column;
+.rlContainers {
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 
-    @media screen and (min-width: 576px) {
-      height: 415px;
-      width: 415px;
-    }
-    @media screen and (max-width: 575px) {
-        
-       max-width: 375px;
-      }
-   
+  @media screen and (min-width: 576px) {
+    max-height: 415px;
+    width: 415px;
   }
-
+  @media screen and (max-width: 575px) {
+    max-width: 375px;
+  }
+}
 
 /*LEFT CONTAINER AND CONTENTS*/
 
 .leftContainer {
   grid-area: leftContainer;
-  @media screen and (max-width:575px) {
-  
-}
+  @media screen and (max-width: 575px) {
+  }
 }
 .alltips {
   display: grid;
   gap: 14px;
+  height: 110px;
   @media screen and (min-width: 576px) {
     grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;}
+    grid-template-rows: 1fr 1fr;
+  }
   @media screen and (max-width: 575px) {
     grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;}
-
- 
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 
 .tipoptions {
+  display: flex;
   background-color: $very-dark-cyan;
-  border-radius: 7px;
+  border-radius: 3px;
   color: $white;
   font-weight: 700;
- 
-  text-align: center;
-  padding-top: 10px;
- 
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    
-}
+  width: 120px;
 
-.tipoptions:hover{
-  background-color: $strong-cyan;
-  color:$very-dark-cyan;
-}
+  align-items: center;
+  justify-content: center;
 
-#custom {
-  background-color: $white;
-  color: $dark-grayish-cyan1;
+  font-size: 22px;
   cursor: pointer;
 }
 
+.tipoptions:hover {
+  background-color: $hover-blue;
+  color: $very-dark-cyan;
+}
+
+#custom {
+  display: flex;
+  background-color: $light-grayish-cyan1;
+  color: $very-dark-cyan;
+  cursor: pointer;
+  width: 97px;
+  padding: 0 10px 0 10px;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Space Mono", monospace;
+
+  border: 3px solid transparent;
+}
+
+#custom:focus {
+  outline: none;
+  border: 3px solid $strong-cyan;
+  text-align: end;
+  padding-right: 10px;
+}
+
 .display-left {
-  display:flex;
-  
+  display: flex;
+
   background-color: $light-grayish-cyan1;
   max-height: 45px;
   border-radius: 5px;
-  padding:10px 12px 10px 12px;
-  
+  padding: 10px 10px 10px 10px;
+  border: 3px solid transparent;
 
-  input{
-   border-style:none;
-   text-align: end;
+  input {
+    border-style: none;
+    text-align: end;
     background-color: transparent;
-  width:100%;
+    width: 100%;
     font-family: "Space Mono", monospace;
-    font-size: 20px;
-    color:$dark-grayish-cyan2;
+    font-size: 24px;
+    color: $very-dark-cyan;
     font-weight: 700;
     cursor: pointer;
-   
-    
-
-    
   }
-  input:focus{
-    outline:none;
+  input:focus {
+    outline: none;
   }
 
-  img{
+  img {
     height: 18px;
     align-self: center;
   }
-
- 
-  
+}
+.display-left:hover,
+.display-left:focus-within {
+  border: 3px solid $strong-cyan;
 }
 
-
-
-
 .title-left {
-  padding-bottom: 20px;
-  padding-top:45px;
+  padding-bottom: 10px;
+  padding-top: 45px;
   font-weight: 700;
   color: $dark-grayish-cyan1;
-  
-  
 }
 
 /*RIGHT CONTAINER AND CONTENTS*/
 
 .rightContainer {
   grid-area: rightContainer;
-  
-  background-color: $very-dark-cyan;
- 
-  @media screen and (min-width:576px) {
-    padding: 40px;
-    gap:35px;
-  }
-  
-  
-  @media screen and (max-width:575px) {
-   
-   padding:25px
-    
-}
 
+  background-color: $very-dark-cyan;
+
+  @media screen and (min-width: 576px) {
+    padding: 40px;
+    gap: 35px;
+  }
+
+  @media screen and (max-width: 575px) {
+    padding: 25px;
+  }
 }
 .total-per-person {
   display: flex;
   justify-content: space-between;
 }
-.total-per-person-print{
-  align-self:center;
-
-}
-
-
-.tip-per-person {
- 
-  display: flex;
-  justify-content: space-between;
-  
-  @media screen and (min-width:576px) {
-    padding-bottom: 50px;
-  
-}
-}
-.tip-per-person-print  {
+.total-per-person-print {
   align-self: center;
 }
 
+.tip-per-person {
+  display: flex;
+  justify-content: space-between;
 
+  @media screen and (min-width: 576px) {
+    padding-bottom: 50px;
+  }
+}
+.tip-per-person-print {
+  align-self: center;
+}
 
-.reset {
-  
+#reset {
   height: 50px;
-  background-color:#0d686d ;
+  background-color: $resetdefault;
   border-radius: 7px;
+
   color: $very-dark-cyan;
   font-weight: 700;
   font-size: 24px;
   text-align: center;
   padding-top: 10px;
   filter: blur(1px);
-  @media screen and (min-width:576px) {
+  @media screen and (min-width: 576px) {
     margin-top: 60px;
-   
-   cursor: pointer;
-    
-  
-}}
-.reset:hover{
-  background-color: $strong-cyan;
-  color:$very-dark-cyan;
-filter:blur(0px);
 
+    cursor: pointer;
+  }
 }
-
-
-
+#reset:hover {
+  background-color: $hover-blue;
+  color: $very-dark-cyan;
+  filter: blur(0px);
+}
 
 .title-right {
   color: $white;
   font-weight: 700;
-  
-
 }
 
 .subtitle {
   color: $dark-grayish-cyan2;
   font-weight: 700;
-
 }
 
-.display-right{
-    display:relative;
-    color:$strong-cyan;
-    font-size:45px;
-    font-weight:700;
-   
-    
-
+.display-right {
+  display: relative;
+  color: $strong-cyan;
+  font-size: 45px;
+  font-weight: 700;
 }
-
