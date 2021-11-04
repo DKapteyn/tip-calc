@@ -15,13 +15,13 @@ const tipOptions = document.querySelectorAll('.tipoptions')
 
 let bill = 0
 let people = 0
-let tip = 0.15
+let tip = 0
 
 
 //Calc EventListeners
-billInput.addEventListener('focusout', () => allPerPersonCalc())
-numberPeople.addEventListener('focusout', () => allPerPersonCalc())
-custom.addEventListener('focusout', () => allPerPersonCalc())
+billInput.addEventListener('keyup', () => allPerPersonCalc())
+numberPeople.addEventListener('keyup', () => allPerPersonCalc())
+
 
 //Setting tip
 
@@ -31,7 +31,7 @@ ten.addEventListener('click', ()=>{tip = 0.1;allPerPersonCalc();})
 fifteen.addEventListener('click', ()=>{tip = 0.15;allPerPersonCalc();})
 twentyFive.addEventListener('click', ()=>{tip = 0.25;allPerPersonCalc();})
 fifty.addEventListener('click', ()=>{tip = 0.50;allPerPersonCalc();})
-custom.addEventListener('click', ()=>{tip = custom.value/100;})
+custom.addEventListener('keyup', ()=>{tip = custom.value/100; allPerPersonCalc();})
 
 
 
