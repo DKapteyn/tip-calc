@@ -125,6 +125,10 @@ header {
   padding: 0 10px 0 10px;
   align-items: center;
   justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 3px;
 
   font-family: "Space Mono", monospace;
 
@@ -137,6 +141,11 @@ header {
   text-align: end;
   padding-right: 10px;
 }
+#custom:hover {
+  background-color: $hover-blue!important;
+  color: $very-dark-cyan!important;
+}
+
 
 .display-left {
   display: flex;

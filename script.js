@@ -20,7 +20,7 @@ let tip = 0
 //Calc EventListeners
 billInput.addEventListener('keyup', () => allPerPersonCalc())
 numberPeople.addEventListener('keyup', () => allPerPersonCalc())
-reset.addEventListener ('click',()=> {tip = 0 , billInput.value = null, numberPeople.value = null,totalPerPerson.innerText = '$0.00', tipPerPerson.innerText ='$0.00', custom.value = null, resetColor()} )
+reset.addEventListener ('click',()=> {tip = 0 , billInput.value = null, numberPeople.value = null,totalPerPerson.innerText = '$0.00', tipPerPerson.innerText ='$0.00', custom.value = null, resetColor(),custom.style.backgroundColor = ""} )
 
 
 
@@ -65,9 +65,42 @@ function allPerPersonCalc(){
 
 function resetColor(){
     if (totalPerPerson.innerText != "$0.00"){
-        return reset.style.backgroundColor = strongCyan, reset.style.filter = "blur(0px)"
+         reset.style.backgroundColor = strongCyan, reset.style.filter = "blur(0px)"
     }
 else if (totalPerPerson.innerText == "$0.00"){
-     return reset.style.backgroundColor = ""}}
+    tipColorClear()
+     reset.style.backgroundColor = "" }
+    }
 
-tipOptions.forEach((tip) =>  tip.addEventListener("click", () => {tip.style.backgroundColor = strongCyan ,tip.style.color = veryDarkCyan}))
+
+
+
+     tipOptions.forEach((tip) => tip.addEventListener ("click", () => tipColorClear()))/*{tipOptions.forEach((t) => {t.style.backgroundColor = "",t.style.color=""})}));*/
+
+tipOptions.forEach((tip) =>  tip.addEventListener("click", () =>{tip.style.backgroundColor = strongCyan ,tip.style.color = veryDarkCyan}));
+
+
+function tipColorClear(){
+    tipOptions.forEach((t) => {t.style.backgroundColor = "",t.style.color=""});
+    ;
+    
+}
+
+
+    custom.addEventListener("focusout", () => {
+
+        if (custom.value != 0){
+        custom.style.backgroundColor = veryDarkCyan;
+   custom.style.color = "white";
+  }
+  else{
+    custom.style.backgroundColor = "";
+    custom.style.color = "";
+  }
+
+
+
+
+})
+
+
