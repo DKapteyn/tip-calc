@@ -82,6 +82,7 @@ tipOptions.forEach((tip) =>  tip.addEventListener("click", () =>{tip.style.backg
 
 function tipColorClear(){
     tipOptions.forEach((t) => {t.style.backgroundColor = "",t.style.color=""});
+    custom.style.color = ""; 
     ;
     
 }

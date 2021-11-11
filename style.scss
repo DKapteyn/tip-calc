@@ -26,23 +26,24 @@ body {
     align-content: center;
   }
 }
-
+//HEADER
 header {
   font-size: 24px;
   font-weight: 700;
   color: $dark-grayish-cyan1;
-  padding-top: 25px;
+
 
   text-align: center;
 
   @media screen and (min-width: 576px) {
     padding-bottom: 70px;
+    padding-top: 25px;
   }
 
   @media screen and (max-width: 575px) {
   }
 }
-
+//MAIN CONTAINER
 .mainContainer {
   background-color: $white;
   display: grid;
@@ -63,11 +64,11 @@ header {
 .rlContainers {
   border-radius: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
 
   @media screen and (min-width: 576px) {
-    max-height: 415px;
+   height: 400px;
     width: 415px;
   }
   @media screen and (max-width: 575px) {
@@ -79,7 +80,9 @@ header {
 
 .leftContainer {
   grid-area: leftContainer;
+  
   @media screen and (max-width: 575px) {
+  
   }
 }
 .alltips {
@@ -107,7 +110,7 @@ header {
   align-items: center;
   justify-content: center;
 
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -125,7 +128,7 @@ header {
   padding: 0 10px 0 10px;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
   border-radius: 3px;
@@ -183,7 +186,7 @@ header {
 
 .title-left {
   padding-bottom: 10px;
-  padding-top: 45px;
+  padding-top: 20px;
   font-weight: 700;
   color: $dark-grayish-cyan1;
 }
@@ -204,6 +207,9 @@ header {
     padding: 25px;
   }
 }
+
+
+
 .total-per-person {
   display: flex;
   justify-content: space-between;
@@ -217,7 +223,7 @@ header {
   justify-content: space-between;
 
   @media screen and (min-width: 576px) {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 .tip-per-person-print {

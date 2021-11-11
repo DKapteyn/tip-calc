@@ -23,12 +23,12 @@ header {
   font-size: 24px;
   font-weight: 700;
   color: #5e7a7d;
-  padding-top: 25px;
   text-align: center;
 }
 @media screen and (min-width: 576px) {
   header {
     padding-bottom: 70px;
+    padding-top: 25px;
   }
 }
 .mainContainer {
@@ -53,12 +53,12 @@ header {
 .rlContainers {
   border-radius: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
 }
 @media screen and (min-width: 576px) {
   .rlContainers {
-    max-height: 415px;
+    height: 400px;
     width: 415px;
   }
 }
@@ -99,7 +99,7 @@ header {
   width: 120px;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -117,7 +117,7 @@ header {
   padding: 0 10px 0 10px;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
   border-radius: 3px;
@@ -171,7 +171,7 @@ header {
 
 .title-left {
   padding-bottom: 10px;
-  padding-top: 45px;
+  padding-top: 20px;
   font-weight: 700;
   color: #5e7a7d;
 }
@@ -208,7 +208,7 @@ header {
 }
 @media screen and (min-width: 576px) {
   .tip-per-person {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 
