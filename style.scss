@@ -12,10 +12,13 @@ $hover-blue: #9de9df;
 
 html,
 body {
-  height: 100%;
+  
   font-family: "Space Mono", monospace;
   margin: 0;
   padding: 0;
+  @media screen and (min-width: 576px) {
+    height: 100%;
+  }
 }
 
 body {
@@ -31,16 +34,15 @@ header {
   font-size: 24px;
   font-weight: 700;
   color: $dark-grayish-cyan1;
-
-
   text-align: center;
 
   @media screen and (min-width: 576px) {
-    padding-bottom: 70px;
-    padding-top: 25px;
+    padding-bottom: 60px;
+      
   }
 
   @media screen and (max-width: 575px) {
+   padding:1em;
   }
 }
 //MAIN CONTAINER
@@ -48,17 +50,18 @@ header {
   background-color: $white;
   display: grid;
   border-radius: 20px;
-  padding: 30px;
+  
 
   @media screen and (min-width: 576px) {
     grid-template-areas: "leftContainer rightContainer";
-    align-content: center;
-
+    
+    padding: 30px;
     gap: 50px;
   }
 
   @media screen and (max-width: 575px) {
     grid-template-areas: "leftContainer" "rightContainer";
+    padding:15px 30px 30px 30px
   }
 }
 .rlContainers {
@@ -68,7 +71,7 @@ header {
   flex-direction: column;
 
   @media screen and (min-width: 576px) {
-   height: 400px;
+    height: 100%;
     width: 415px;
   }
   @media screen and (max-width: 575px) {
@@ -80,18 +83,20 @@ header {
 
 .leftContainer {
   grid-area: leftContainer;
-  
+  height: 100%;
+  margin-bottom: 20px;
+
   @media screen and (max-width: 575px) {
-  
   }
 }
 .alltips {
   display: grid;
   gap: 14px;
-  height: 110px;
+ 
   @media screen and (min-width: 576px) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    height: 110px;
   }
   @media screen and (max-width: 575px) {
     grid-template-columns: 1fr 1fr;
@@ -99,19 +104,22 @@ header {
   }
 }
 
+//TIPS
 .tipoptions {
   display: flex;
   background-color: $very-dark-cyan;
-  border-radius: 3px;
+  border-radius: 5px;
   color: $white;
   font-weight: 700;
   width: 120px;
-
-  align-items: center;
+ align-items: center;
   justify-content: center;
-
-  font-size: 24px;
+ font-size: 24px;
   cursor: pointer;
+
+  @media screen and (max-width: 575px) {
+  padding:5px 15px 5px 15px;
+  }
 }
 
 .tipoptions:hover {
@@ -131,33 +139,41 @@ header {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 5px;
 
   font-family: "Space Mono", monospace;
 
   border: 3px solid transparent;
+  @media screen and (max-width: 575px) {
+    width:124px
+    }
+
 }
 
 #custom:focus {
   outline: none;
-  border: 3px solid $strong-cyan;
+  box-shadow: 0px 0px 0px 3px $strong-cyan;
   text-align: end;
   padding-right: 10px;
+  background: $light-grayish-cyan1!important;
+  color: $very-dark-cyan !important;
 }
 #custom:hover {
-  background-color: $hover-blue!important;
-  color: $very-dark-cyan!important;
+  box-shadow: 0px 0px 0px 3px $strong-cyan !important;
+  color: $very-dark-cyan !important;
+  background: $light-grayish-cyan1!important;
 }
 
+//BILL AND #OF PEOPLE INPUTS 
 
 .display-left {
   display: flex;
-
+ 
   background-color: $light-grayish-cyan1;
   max-height: 45px;
-  border-radius: 5px;
+  border-radius: 7px;
   padding: 10px 10px 10px 10px;
-  border: 3px solid transparent;
+ 
 
   input {
     border-style: none;
@@ -181,14 +197,32 @@ header {
 }
 .display-left:hover,
 .display-left:focus-within {
-  border: 3px solid $strong-cyan;
+  box-shadow: 0px 0px 0px 3px $strong-cyan;
 }
+
+
 
 .title-left {
   padding-bottom: 10px;
   padding-top: 20px;
   font-weight: 700;
   color: $dark-grayish-cyan1;
+}
+#bottom-display-left {
+  margin-bottom: 20px;
+}
+
+.numofpeopletitle{
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+//HIDDEN TITLE
+
+#nozero{
+  color:red;
+  display:none;
 }
 
 /*RIGHT CONTAINER AND CONTENTS*/
@@ -198,17 +232,20 @@ header {
 
   background-color: $very-dark-cyan;
 
-  @media screen and (min-width: 576px) {
-    padding: 40px;
-    gap: 35px;
-  }
-
+ 
   @media screen and (max-width: 575px) {
     padding: 25px;
+    justify-content: start;
+    height: 230px;
   }
 }
+//TOTAL PER PERSON /TIP PER PERSON
 
-
+.both-per-persons {
+  @media screen and (min-width: 576px) {
+    padding: 35px;
+  }
+}
 
 .total-per-person {
   display: flex;
@@ -223,12 +260,30 @@ header {
   justify-content: space-between;
 
   @media screen and (min-width: 576px) {
-    padding-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 .tip-per-person-print {
   align-self: center;
 }
+.title-right {
+  color: $white;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: $dark-grayish-cyan2;
+  font-weight: 700;
+}
+
+.display-right {
+  color: $strong-cyan;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+
+//RESET BUTTON
 
 #reset {
   height: 50px;
@@ -243,29 +298,24 @@ header {
   filter: blur(1px);
   @media screen and (min-width: 576px) {
     margin-top: 60px;
-
+   
     cursor: pointer;
+    margin: 30px;
+  }
+  @media screen and (max-width: 575px) {
+    margin-top: 20px;
   }
 }
+
 #reset:hover {
   background-color: $hover-blue;
   color: $very-dark-cyan;
   filter: blur(0px);
 }
 
-.title-right {
-  color: $white;
-  font-weight: 700;
-}
-
-.subtitle {
-  color: $dark-grayish-cyan2;
-  font-weight: 700;
-}
-
-.display-right {
-  display: relative;
-  color: $strong-cyan;
-  font-size: 45px;
-  font-weight: 700;
-}
+//ATTRIBUTION
+.attribution{
+  padding-top:1em;
+  @media screen and (min-width: 576px) {
+    margin-bottom:100px;
+}}

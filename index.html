@@ -39,7 +39,7 @@
     </header>
     <div class="mainContainer">
       <div class="leftContainer rlContainers">
-        <!--Right Side-->
+        <!--Left Side-->
         
         <div class="bill">
           <div class="title-left">Bill</div>
@@ -75,8 +75,12 @@
           </div>
         </div>
         <div class="num-ppl">
-          <div class="title-left">Number of People</div>
-          <div class="display-left">
+          <div class= numofpeopletitle>
+          <div class="title-left" >Number of People</div>
+          <div class="title-left" id="nozero">Can't be Zero</div>
+
+        </div> 
+          <div class="display-left" id="bottom-display-left">
             <img src="images/icon-person.svg" alt="image of person" />
             <input
               type="text"
@@ -89,7 +93,7 @@
         </div>
       </div>
 
-      <!--Left Side-->
+      <!--Right Side-->
       <div class="rightContainer rlContainers">
         <div class="both-per-persons">
         <div class="tip-per-person">
@@ -105,11 +109,12 @@
             <div class="subtitle">/ person</div>
           </div>
           <div class="display-right" id="total-per-person-display">$0.00</div>
+          
         </div>
       </div>
-        <div id="reset">
-          <div>RESET</div>
-        </div>
+       
+          <div id="reset">RESET</div>
+       
       </div>
     </div>
 
@@ -117,7 +122,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">David Kapteyn</a>.
     </div>
     <script src="script.js"></script>
   </body>
