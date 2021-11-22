@@ -19,7 +19,7 @@ let people = 0;
 let tip = 0;
 
 //Calc EventListeners
-billInput.addEventListener("keyup", () => allPerPersonCalc());
+billInput.addEventListener("keyup",  allPerPersonCalc);
 numberPeople.addEventListener("keyup", () => {
   allPerPersonCalc(), checkforzero();
 });
@@ -90,7 +90,7 @@ function allPerPersonCalc() {
 }
 
 tipOptions.forEach((tip) =>
-  tip.addEventListener("click", () => tipColorClear())
+  tip.addEventListener("click", tipColorClear)
 );
 
 tipOptions.forEach((tip) =>
