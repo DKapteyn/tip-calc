@@ -8,13 +8,13 @@ body {
 }
 @media screen and (min-width: 576px) {
   html,
-body {
+  body {
     height: 100%;
   }
 }
 
 body {
- display:flex;
+  display: flex;
   background-color: #c5e4e7;
   justify-content: center;
   flex-direction: column;
@@ -48,8 +48,8 @@ header {
     grid-template-areas: "leftContainer rightContainer";
     padding: 30px;
     gap: 50px;
-    height:435px;
-    width:880px;
+    height: 435px;
+    width: 880px;
   }
 }
 @media screen and (max-width: 575px) {
